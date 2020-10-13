@@ -3,6 +3,7 @@ from ant import *
 
 def main():
 	chess_board = Board(8, 8)
+	print(chess_board.get_x_width())
 	ant_1 = Ant(0, 0, chess_board)
 	ant_2 = Ant(7, 7, chess_board)
 	print("ant_1")
