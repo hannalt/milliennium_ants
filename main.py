@@ -1,23 +1,20 @@
-from board import *
-from ant import *
-
+from play import *
 def main():
-	chess_board = Board(8, 8)
-	print(chess_board.get_x_width())
-	ant_1 = Ant(0, 0, chess_board)
-	ant_2 = Ant(7, 7, chess_board)
-	print("ant_1")
-	ant_1.print_ant_info()
-	print("ant_2")
-	ant_2.print_ant_info()
-	for i in range(8):
-		print("ant_1")
-		ant_1.move()
-		ant_1.print_ant_info()
-		print("ant_2")
-		ant_2.move()
-		ant_2.print_ant_info()
-	#print(this_board)
+	chessboard, ants = build()
+	print("normal")
+	same_end(chessboard, ants)
+	print("diagonal")
+	chessboard, ants = build()
+	same_end(chessboard, ants, True)
+	print("last matters")
+	chessboard, ants = build()
+	same_end(chessboard, ants, False, True)
+	print("last matters and diag")
+	chessboard, ants = build()
+	same_end(chessboard, ants, True)
+
 
 if __name__ == "__main__":
 	main()
+
+

@@ -31,12 +31,28 @@ class Spot:
 				elif y == 0:
 					self.valid_spots.append(new_spot)
 				self.valid_diag_spots.append(new_spot)
+		
 
-	def get_valid_spots(self, diag):
+	def get_valid_spots(self, diag, last_matters, last):
+
+		if last_matters and diag:
+			return self.last_matters(self.valid_diag_spots, last)
 		if diag:
 			return self.valid_diag_spots
+		if last_matters:
+			return self.last_matters(self.valid_spots, last)
 		return self.valid_spots	
 
+	def last_matters(self, spots, last):
+		if last == None:
+			return spots
+		new_spots = []
+		index = spots.index(last)
+		for i in range(len(spots)):
+			if i != index:
+				new_spots.append(spots[i])
+		return new_spots  
+	
 	def get_x(self):
 		return self.x
 	
