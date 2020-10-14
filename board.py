@@ -7,6 +7,7 @@ class Board:
 		self.y_length = y_length
 		self.spots = []
 		self.ant_locations = []
+		self.last_locations = []
 		for y in range(y_length):
 			for x in range(x_width):
 				self.spots.append(Spot(x, y, self))
@@ -35,6 +36,7 @@ class Board:
 		if len(self.ant_locations) == len(set(self.ant_locations)):
 			return True
 		return False
+
 	def start_locations(self, spot):
 		self.ant_locations.append(self.get_spot_index(spot))
 	

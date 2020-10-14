@@ -1,17 +1,17 @@
 from play import *
 def main():
-	chessboard, ants = build()
-	print("normal")
-	same_end(chessboard, ants)
-	print("diagonal")
-	chessboard, ants = build()
-	same_end(chessboard, ants, True)
-	print("last matters")
-	chessboard, ants = build()
-	same_end(chessboard, ants, False, True)
-	print("last matters and diag")
-	chessboard, ants = build()
-	same_end(chessboard, ants, True)
+
+	for i in range(2):
+		print("type", i)
+		print("normal")
+		go(i)
+		print("diagonal")
+		go(i, True)
+		print("last matters")
+		go(i, False, True)
+		print("last matters and diag")
+		go(i, True, True)
+	
 
 
 if __name__ == "__main__":

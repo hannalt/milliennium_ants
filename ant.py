@@ -15,6 +15,7 @@ class Ant:
 		self.board.start_locations(self.spot)
 		self.time_reset()
 		self.last = None
+		self.last_index = -1
 	
 	def move(self, diag= False, last_matters = False):
 		self.time += 10 #seconds 
@@ -27,6 +28,12 @@ class Ant:
 
 	def get_spot(self):
 		return self.spot
+
+	def get_spot_index(self):
+		return self.board.get_spot_index(self.spot)
+
+	def get_last_index(self):
+		return self.last_index
 	
 	def get_time(self):
 		return self.time
@@ -42,9 +49,12 @@ class Ant:
 	
 	@dispatch(object)
 	def teleport(self, spot):
+		self.last_index = self.get_spot_index()
 		self.last = self.spot
 		self.board.update_ant(self.last, spot)
 		self.spot = spot
+		#print(self.last_index)
+		#print(self.get_spot_index())
 		self.x = spot.get_x()	
 		self.y = spot.get_y()
 
