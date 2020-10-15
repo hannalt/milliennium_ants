@@ -89,4 +89,4 @@ class Ant:
 
 	#prints information above the ant.
 	def print_ant_info(self):
-		print("x:", self.x, "y:",  self.y, "spot:", self.spot,"spot_index:", self.get_spot_index(), "time:", self.time)
+		print("x:\t", self.x, "y:\t",  self.y, "last:\t", self.get_last_index(),"spot_index:\t", self.get_spot_index(), "time:\t", self.time)

@@ -27,7 +27,7 @@ class Game:
 	def go(self, type, diag = False, last_matters = False, verbose = True):
 		self.reset()
 		while self.compare(type):
-			#This is to stop the infinite loop that's happening when last_matters == 1 and diag == 0.
+			#This is to stop the infinite loop that's happening when type == 1 and diag == 0.
 			if self.ants[0].get_time() > 200000:
 				break
 			self.move_ants(diag, last_matters)	
@@ -72,6 +72,7 @@ class Game:
 	def move_ants(self, diag, last_matters):
 		for ant in self.ants:
 			ant.move(diag, last_matters)
+
 	'''
 	#This is a function where I force ants to pass to test my passing.
 	def cheating(ants, chess_board):

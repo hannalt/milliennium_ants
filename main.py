@@ -38,7 +38,7 @@ def main(verbose = False, x_width = 8, y_length= 8, start_positions = [[0,0],[7,
 	print("+----------------------+----------------------+----------------------+")
 	print("|                      |Move To Previous:Yes  |Move to Previous: No  |")
 	print("+----------------------+----------------------+----------------------+")
-	print("|Move Diagonally: No   |", no_yes_avg[1], "\t\t|", no_no_avg[1], "\t\t|")
+	print("|Move Diagonally: No   |Impossible (infinite) |Impossible (infinite) |")
 	print("+----------------------+----------------------+----------------------+")
 	print("|Move Diagonally: Yes  |", yes_yes_avg[1], "\t\t|", yes_no_avg[1], "\t\t|")
 	print("+----------------------+----------------------+----------------------+")
