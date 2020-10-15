@@ -1,4 +1,10 @@
 # milliennium_ants
-If you want to embed images, this is how you do it:
+This is my very very rough proof that it is impossible to get two ants to pass when you start them in opposite corners without allowing diagonal moves.
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Page1](imgs/IMG_9663.JPG)
+
+![Image of Page2](imgs/IMG_9665.JPG)
+
+![Image of Page3](imgs/IMG_9666.JPG)
+
+![Image of Page3](imgs/IMG_9667.JPG)
